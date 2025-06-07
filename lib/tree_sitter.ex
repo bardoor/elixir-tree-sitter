@@ -48,7 +48,7 @@ defmodule TreeSitter do
   @on_load {:load_nif, 0}
 
   def load_nif do
-    path = Application.app_dir(:tree_sitter, ["priv", "native", "tree_sitter"])
+    path = Application.app_dir(:elixir_tree_sitter, ["priv", "native", "tree_sitter_elixir"])
     :ok = :erlang.load_nif(path, 0)
   end
 
